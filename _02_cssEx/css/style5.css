@@ -1,0 +1,16 @@
+p{
+    font-weight: bold;
+    font-style: italic;
+    
+    /* color: transparent;
+    background-image: linear-gradient(to right, yellow, blue);
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        transform: translateY(-5px);
+    } */
+}
