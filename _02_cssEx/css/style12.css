@@ -1,0 +1,10 @@
+div{
+    background-image: url(../images/bg-airplane.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*출력영역을 꽉채우는 것(비율유지, 일부손실가능성)*/
+    height: 100vh;
+}
+p{
+    text-align: center;
+    padding-top: 30px;
+}

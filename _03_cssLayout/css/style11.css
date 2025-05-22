@@ -1,0 +1,14 @@
+.container{
+    display: grid;
+    /* 화면에 따라 유연하게 3등분 */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px;
+    grid-template-rows: 200px 200px;
+}     
+    
+.item{
+    background: #0bd;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리셋 css</title>
+    <!-- 브라우저마다 css스타일이 달라서 css차이를 최소화시켜주는 리셋 css설정
+         브라우저의 스타일을 따르지 않고, 직접 스타일을 정해주면 된다.
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- 리셋 후에 우리의 스타일을 지정해야 한다. -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>문의</h1>
+    <p>문의 할 것이 있다면 연락해주세요</p>
+    <p>이름</p>
+    <form>
+        <input type="text" placeholder="Thank you">
+        <p>문의 내용</p>
+        <select name="question">
+            <option value="a">상품 문의</option>
+            <option value="b">가게 문의</option>
+            <option value="c">그 외</option>
+        </select>
+        <p>문의하기</p>
+        <textarea name="message"></textarea>
+    </form>
+</body>
+</html>

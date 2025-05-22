@@ -1,0 +1,9 @@
+.container{
+    display: flex;      /* flex 레이아웃 사용 */
+}
+.item{
+    background: #0bd;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+}

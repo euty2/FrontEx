@@ -1,0 +1,10 @@
+div{
+    background-image: url(../images/bg-airplane.jpg);
+    background-repeat: no-repeat;
+    background-size: contain; /*이미지가 전체 포함(일부 여백)*/
+    height: 100vh;
+}
+p{
+    text-align: center;
+    padding-top: 30px;
+}
