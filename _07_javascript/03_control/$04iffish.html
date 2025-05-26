@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>물고기 조건문</title>
+   
+    <script>
+        // html이 로딩되어 document가 초기화되는 이벤트 수신, 함수 호출
+        document.addEventListener('DOMContentLoaded', () => {
+            const fish = document.getElementById('fish');
+
+            const button = document.getElementById('btnStart');
+            button.addEventListener('click', function(){
+                const x = Number(document.getElementById('txtX').value);
+                const y = Number(document.getElementById('txtY').value);
+
+                if((x>=0 && x<=500) && (y>=0 && y<=300)){
+                    fish.style.left = x + 'px';
+                    fish.style.top = y + 'px';
+                }else{
+                    alert('입력값이 범위를 넘었습니다.');
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="panel">
+        <img src="../images/fish.png" id="fish">
+    </div>
+    <div id="nav">
+        <label>x값 입력 : <input id='txtX'/></label>
+        <label>y값 입력 : <input id='txtY'/></label>
+        <br/>
+        <button id="btnStart">물고기 움직이기</button>
+    </div>
+</body>
+</html>

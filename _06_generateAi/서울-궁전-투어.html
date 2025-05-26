@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Royal Palaces - Discover Korea's Royal Heritage</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#c8191e',secondary:'#003e7e'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=A%20panoramic%20view%20of%20traditional%20Korean%20palace%20architecture%20in%20Seoul%2C%20with%20ornate%20wooden%20structures%2C%20vibrant%20red%20and%20blue%20painted%20details%2C%20curved%20tiled%20roofs%2C%20and%20stone%20courtyards.%20The%20image%20captures%20the%20grandeur%20of%20ancient%20Korean%20royal%20residences%20against%20a%20clear%20blue%20sky%2C%20with%20blooming%20cherry%20blossoms%20or%20autumn%20foliage%20depending%20on%20the%20season.%20The%20lighting%20is%20soft%20and%20golden%2C%20highlighting%20the%20intricate%20details%20of%20the%20palace%20structures.&width=1920&height=800&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .palace-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .palace-card {
+            transition: all 0.3s ease;
+        }
+        .newsletter-section {
+            background-image: url('https://readdy.ai/api/search-image?query=A%20subtle%2C%20elegant%20background%20showing%20traditional%20Korean%20patterns%20and%20motifs%20in%20very%20light%20gold%20and%20blue%20colors.%20The%20design%20features%20delicate%20geometric%20and%20floral%20elements%20inspired%20by%20Korean%20palace%20decorations%2C%20creating%20a%20sophisticated%20and%20culturally%20authentic%20backdrop.%20The%20pattern%20should%20be%20subtle%20enough%20to%20not%20distract%20from%20text%20overlaid%20on%20it%2C%20with%20soft%20colors%20and%20minimal%20contrast.&width=1920&height=400&seq=2&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary">Seoul Royal Palaces</a>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="font-medium text-gray-900 border-b-2 border-primary">Home</a>
+                <a href="#" class="font-medium text-gray-600 hover:text-primary transition">Palaces</a>
+                <a href="#" class="font-medium text-gray-600 hover:text-primary transition">Tours</a>
+                <a href="#" class="font-medium text-gray-600 hover:text-primary transition">About</a>
+                <a href="#" class="font-medium text-gray-600 hover:text-primary transition">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button class="flex items-center text-gray-700 hover:text-primary">
+                        <span>English</span>
+                        <div class="w-5 h-5 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+                </div>
+                
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-4 py-32 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Discover Seoul's Royal Heritage</h1>
+                <p class="text-xl text-white mb-8">Experience the majestic palaces that tell the story of Korea's rich cultural history</p>
+                
+                <div class="bg-white bg-opacity-90 rounded-full p-2 max-w-xl mx-auto flex items-center">
+                    <div class="w-10 h-10 flex items-center justify-center text-gray-500">
+                        <i class="ri-search-line text-xl"></i>
+                    </div>
+                    <input type="text" placeholder="Search for palaces, tours, or information..." class="w-full bg-transparent border-none outline-none px-2 text-gray-800">
+                    <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 !rounded-button whitespace-nowrap">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Palace Grid Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore Seoul's Magnificent Palaces</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Step back in time and discover the architectural marvels that housed Korea's royal families for centuries</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Gyeongbokgung Palace -->
+                <div class="palace-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Gyeongbokgung%20Palace%20in%20Seoul%2C%20South%20Korea%2C%20showing%20the%20grand%20Gwanghwamun%20Gate%20with%20its%20ornate%20roof%20and%20colorful%20painted%20details.%20The%20image%20captures%20the%20majestic%20main%20palace%20complex%20with%20traditional%20Korean%20architecture%2C%20featuring%20wooden%20structures%20with%20curved%20tiled%20roofs%2C%20stone%20courtyards%2C%20and%20mountain%20backdrop.%20The%20scene%20is%20bright%20and%20clear%2C%20showcasing%20the%20palaces%20impressive%20scale%20and%20historical%20significance%20as%20the%20main%20royal%20palace%20of%20the%20Joseon%20dynasty.&width=800&height=500&seq=3&orientation=landscape" alt="Gyeongbokgung Palace" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Gyeongbokgung</h3>
+                            <p class="text-lg text-gray-600">경복궁</p>
+                        </div>
+                        <p class="text-gray-700 mb-4">The largest and most magnificent of the Five Grand Palaces, Gyeongbokgung served as the main royal palace of the Joseon dynasty, featuring the iconic Gwanghwamun Gate and stunning mountain backdrop.</p>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button whitespace-nowrap flex items-center">
+                            Learn More
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Changdeokgung Palace -->
+                <div class="palace-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Changdeokgung%20Palace%20in%20Seoul%2C%20South%20Korea%2C%20featuring%20its%20UNESCO%20World%20Heritage%20status.%20The%20image%20shows%20traditional%20Korean%20palace%20architecture%20with%20the%20famous%20Secret%20Garden%20%28Huwon%29%20with%20its%20beautiful%20landscaping%2C%20ponds%2C%20and%20pavilions.%20The%20palace%20structures%20feature%20wooden%20buildings%20with%20intricate%20roof%20designs%2C%20colorful%20painted%20details%2C%20and%20harmonious%20integration%20with%20the%20natural%20landscape.%20The%20scene%20captures%20the%20unique%20beauty%20that%20earned%20this%20palace%20UNESCO%20recognition%2C%20with%20lush%20greenery%20and%20traditional%20Korean%20aesthetic%20elements.&width=800&height=500&seq=4&orientation=landscape" alt="Changdeokgung Palace" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Changdeokgung</h3>
+                            <p class="text-lg text-gray-600">창덕궁</p>
+                        </div>
+                        <p class="text-gray-700 mb-4">A UNESCO World Heritage site, Changdeokgung is renowned for its beautiful garden complex, Huwon (Secret Garden), and its harmonious integration with the natural landscape.</p>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button whitespace-nowrap flex items-center">
+                            Learn More
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Deoksugung Palace -->
+                <div class="palace-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Deoksugung%20Palace%20in%20Seoul%2C%20South%20Korea%2C%20showing%20its%20unique%20blend%20of%20traditional%20Korean%20and%20Western%20architectural%20styles.%20The%20image%20captures%20the%20stone-wall%20road%20alongside%20the%20palace%2C%20the%20traditional%20Korean%20buildings%20with%20their%20curved%20roofs%2C%20and%20the%20Western-style%20structures%20added%20during%20the%20late%20Joseon%20period.%20The%20scene%20includes%20the%20famous%20Daehanmun%20Gate%20and%20the%20palaces%20distinctive%20atmosphere%20as%20an%20urban%20palace%20in%20the%20heart%20of%20modern%20Seoul%2C%20with%20the%20contrast%20between%20traditional%20elements%20and%20surrounding%20modern%20buildings.&width=800&height=500&seq=5&orientation=landscape" alt="Deoksugung Palace" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Deoksugung</h3>
+                            <p class="text-lg text-gray-600">덕수궁</p>
+                        </div>
+                        <p class="text-gray-700 mb-4">Known as the "Palace of Virtuous Longevity," Deoksugung features a unique blend of traditional Korean and Western architecture, with a beautiful stone-wall road that's especially romantic in the evening.</p>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button whitespace-nowrap flex items-center">
+                            Learn More
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Changgyeonggung Palace -->
+                <div class="palace-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Changgyeonggung%20Palace%20in%20Seoul%2C%20South%20Korea%2C%20showing%20its%20serene%20and%20elegant%20atmosphere.%20The%20image%20captures%20the%20traditional%20Korean%20palace%20architecture%20with%20its%20wooden%20structures%2C%20colorful%20painted%20details%2C%20and%20beautiful%20gardens%20with%20ponds%20and%20pavilions.%20The%20scene%20includes%20the%20distinctive%20features%20of%20this%20palace%20known%20as%20the%20Palace%20of%20Flourishing%20Gladness%2C%20including%20Myeongjeongjeon%20Hall%20and%20the%20surrounding%20landscape.%20The%20palace%20appears%20less%20crowded%20than%20other%20royal%20palaces%2C%20highlighting%20its%20peaceful%20atmosphere%20and%20natural%20beauty%20with%20seasonal%20flowers%20or%20autumn%20foliage.&width=800&height=500&seq=6&orientation=landscape" alt="Changgyeonggung Palace" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-900">Changgyeonggung</h3>
+                            <p class="text-lg text-gray-600">창경궁</p>
+                        </div>
+                        <p class="text-gray-700 mb-4">The "Palace of Flourishing Gladness" is known for its beautiful gardens and ponds. Originally built as a residence for queens and concubines, it offers a more serene atmosphere than other palaces.</p>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button whitespace-nowrap flex items-center">
+                            Learn More
+                            <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Information Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Visitor Information</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Everything you need to know for your palace visit</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Opening Hours -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-time-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Opening Hours</h3>
+                    <p class="text-gray-700">
+                        Tuesday - Sunday<br>
+                        9:00 AM - 6:00 PM<br>
+                        (Closed on Mondays)
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">Last admission 1 hour before closing</p>
+                    </div>
+                </div>
+                
+                <!-- Ticket Prices -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-ticket-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ticket Prices</h3>
+                    <p class="text-gray-700">
+                        Adults: ₩3,000<br>
+                        Children: ₩1,500<br>
+                        Seniors (65+): Free
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">Integrated ticket for all palaces: ₩10,000</p>
+                    </div>
+                </div>
+                
+                <!-- Guided Tours -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-guide-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Guided Tours</h3>
+                    <p class="text-gray-700">
+                        English: 11:00 AM, 2:00 PM<br>
+                        Chinese: 10:00 AM, 1:00 PM<br>
+                        Japanese: 10:30 AM, 1:30 PM
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">Free with admission ticket</p>
+                    </div>
+                </div>
+                
+                <!-- Transportation -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-subway-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Transportation</h3>
+                    <p class="text-gray-700">
+                        Subway Line 3 to Gyeongbokgung<br>
+                        Subway Line 5 to Gwanghwamun<br>
+                        City Bus: 101, 150, 171
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">20 min from Seoul Station</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white bg-opacity-90 rounded-lg p-8 shadow-lg">
+                <div class="text-center mb-6">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Stay Updated</h2>
+                    <p class="text-gray-600">Subscribe to our newsletter for special events, seasonal highlights, and exclusive offers</p>
+                </div>
+                
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50">
+                    <button type="submit" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Us</h3>
+                    <p class="text-gray-400 mb-4">Seoul Royal Palaces is dedicated to promoting the rich cultural heritage of Korea's historic royal residences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Palaces</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tours</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-2">
+                                <i class="ri-map-pin-line text-gray-400"></i>
+                            </div>
+                            <span class="text-gray-400">161 Sajik-ro, Jongno-gu, Seoul, South Korea</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-phone-line text-gray-400"></i>
+                            </div>
+                            <span class="text-gray-400">+82-2-123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-mail-line text-gray-400"></i>
+                            </div>
+                            <span class="text-gray-400">info@seoulpalaces.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Opening Hours -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Office Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday:</span>
+                            <span>9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday:</span>
+                            <span>10:00 AM - 4:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span>Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>© 2025 Seoul Royal Palaces. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.ri-menu-line').parentElement;
+            const nav = document.querySelector('nav');
+            
+            menuButton.addEventListener('click', function() {
+                if (nav.classList.contains('hidden')) {
+                    nav.classList.remove('hidden');
+                    nav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'p-4', 'space-y-4');
+                } else {
+                    nav.classList.add('hidden');
+                    nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-white', 'shadow-lg', 'p-4', 'space-y-4');
+                }
+            });
+        });
+    </script>
+    
+    <script id="languageSelectorScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelector = document.querySelector('button.flex.items-center.text-gray-700');
+            
+            languageSelector.addEventListener('click', function() {
+                alert('Language selection feature coming soon!');
+            });
+        });
+    </script>
+</body>
+</html>
