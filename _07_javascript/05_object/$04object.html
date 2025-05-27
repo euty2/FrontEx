@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const student = {};
+
+        student.name = 'Albert';
+        student.job = 'Developer';
+        student.age = 24;
+        student.score = 97.4;
+
+        console.log(student);
+
+        // json문자열로 변경하기
+        const st = JSON.stringify(student);
+        console.log(st);
+
+        delete student.score;
+        const st1 = JSON.stringify(student);
+        console.log(st1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
