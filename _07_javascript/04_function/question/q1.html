@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <style>
+        .square{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: black;
+        }
+        .greeting{
+            font-size: 300%;
+            font-family: sans-serif;
+            color: white;
+            opacity: 0;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.greeting').style.opacity = '1';
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <!-- 1. 사각형 배경에 3초 이후 '안녕하세요. 감사합니다' 나타나도록 -->
+     <div class="square">
+        <h1 class="greeting">안녕하세요. 감사합니다</h1>
+     </div>
+</body>
+</html>

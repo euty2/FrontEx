@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 30px;
+        }
+        .number{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 25%;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        let timer;
+        let count = 0;
+
+        window.onload = function() {
+            const display = document.querySelector('.timer');
+            const stopBtn = document.querySelector('.stop');
+            
+            timer = setInterval(() => {
+                count++;
+                display.textContent = count;
+            }, 100);
+
+            stopBtn.onclick = function() {
+                clearInterval(timer);
+                display.textContent = count;
+            }
+        };
+    </script>
+</head>
+<body>
+    <!-- 2. 숫자가 0.1초단위로 증가하다가 '멈춤'버튼을 누르면 멈추기 -->
+    <div class="container">
+        <div class="number">
+            <h1 class="stop">멈춤</h1>
+        </div>
+        <div class="number">
+            <h1 class="timer">0</h1>
+        </div>
+    </div>
+</body>
+</html>
