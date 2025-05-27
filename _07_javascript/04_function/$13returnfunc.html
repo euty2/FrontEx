@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const createHello = function(){
+            const hello = function(user){
+                console.log(`${user}님 방문을 환영합니다.`)
+            }
+            return hello;
+        }
+
+        const result = createHello();
+        result('Albert');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

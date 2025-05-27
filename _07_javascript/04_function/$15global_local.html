@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let gCount=0;       // 전역변수
+        const gAddCount = function(){
+            gCount++;
+            return gCount;
+        }
+
+        console.log(`count=${gAddCount()}`);
+        console.log(`count=${gAddCount()}`);
+        console.log(`count=${gAddCount()}`);
+
+        const addCount = function(){
+            let count=0;
+            count++;
+            return count;
+        }
+
+        console.log(`count=${addCount()}`);
+        console.log(`count=${addCount()}`);
+        console.log(`count=${addCount()}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

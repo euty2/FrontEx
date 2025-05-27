@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const createCounter = function(){
+            let count = 0;
+
+            // 내부함수(overlap function)
+            // 내부함수가 상위의 지역변수의 값을 변경하면
+            // javascript는 이 지역변수를 보관한다.
+            // 지역변수의 값을 보관하는 내부함수===클로저 함수
+            let addCount = function(){
+                return ++count;
+            }
+
+            return addCount;
+        }
+
+        const counter = createCounter();
+
+        console.log(`counter=${counter()}`);
+        console.log(`counter=${counter()}`);
+        console.log(`counter=${counter()}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
