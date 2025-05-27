@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        for(let i=0;i<numbers.length;i++)
+            console.log(`${i}번째 요소 ${numbers[i]}`);
+
+        numbers.forEach(function(val, idx, arr){
+            console.log(`${idx}번째 요소 ${val}`);
+        });
+
+        // 자동 순회 후 연산 => 배열 리턴
+        const numArr = numbers.map(function(val, idx, arr){
+            return val * val;
+        });
+        console.log(numArr);
+
+        const nums0 = numbers.map(function(val){
+            return val/2;
+        });
+        const nums1 = numbers.map(function(val){
+            return val + 100;
+        });
+        nums0.forEach(console.log);
+        nums1.forEach(console.log);
+
+        // 조건에 맞는 값만 리턴
+        const evenNums = numbers.filter(function(val){
+            return val%2===0;
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
