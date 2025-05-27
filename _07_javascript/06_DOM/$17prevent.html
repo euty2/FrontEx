@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://i.pinimg.com/236x/1f/e8/1a/1fe81ab9204aa5bce669e3adae9d9d18.jpg"/>
+
+    <script>
+        const img = document.querySelector('img');
+
+        img.addEventListener('contextmenu', (e)=>{
+            e.preventDefault();     // 해당 태그의 기본 동작을 막는다.
+        })
+    </script>
+</body>
+</html>
