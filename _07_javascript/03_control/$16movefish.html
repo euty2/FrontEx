@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 500px;
+            height: 500px;
+            border: 3px solid #999;
+            position: relative;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $fish = document.getElementById('fish');
+            let x = 50, y = 200;
+            const LEFT_KEY = 37, RIGHT_KEY = 39, UP_KEY = 38, DOWN_KEY = 40;
+            const move_val = 10, panel_width = 500, panel_height = 500, fish_width = 120, fish_height = 70;
+            const audio = new Audio('pong.mp3');
+            document.addEventListener('keydown', (e) => {
+            audio.currentTime = 0; // Reset audio to start
+            audio.play(); // Play sound
+            console.log('입력 키 코드=' + e.keyCode);
+            switch (e.keyCode) {
+                case LEFT_KEY:
+                x -= move_val;
+                break;
+                case RIGHT_KEY:
+                x += move_val;
+                break;
+                case UP_KEY:
+                y -= move_val;
+                break;
+                case DOWN_KEY:
+                y += move_val;
+                break;
+            }
+            const rcPanel = document.getElementById('panel').getBoundingClientRect();   // panel영역크기얻기
+            const rcFish = $fish.getBoundingClientRect();                               // fish영역크기얻기
+            if(x<0) x=0;
+            else if(x>panel_width-fish_width) x=panel_width-fish_width;
+            if(y<0) y=0;
+            else if(y>panel_height-fish_height) y=panel_height-fish_height;
+
+            $fish.style.left = x + 'px';
+            $fish.style.top = y + 'px';
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <img src="../images/fish.png" id="fish">
+    </div>
+</body>
+
+</html>
