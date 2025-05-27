@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const callTimes = function(callback, num){
+            for(let i=0;i<num;i++)
+                callback(i);
+        }
+
+        const print = function(i){
+            console.log(`${i}번째 함수 호출`);
+        }
+        const thanks = function(i){
+            console.log(`${i} 감사합니다.`);
+        }
+        const happy = function(i){
+            console.log(`${i} 행복합니다~`);
+        }
+
+        callTimes(print, 3);
+        callTimes(thanks, 5);
+        callTimes(happy, 6);
+        callTimes(function(i){console.log(`${i} ㅎㅎㅎ`)}, 3);
+        callTimes((i)=>console.log(`${i} ㅋㅋㅋㅋ`), 3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

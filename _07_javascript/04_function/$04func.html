@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        // 1. 선언적 함수
+        function add(num0, num1){
+            return num0+num1;
+        }
+        // 2. 리터럴 방식(익명함수객체 변수대입)
+        const sub = function(num0, num1){
+            return num0-num1;
+        }
+        // 3. 화살표 함수, 람다식
+        const mul = (num0, num1) => {
+            return num0*num1;
+        }
+        // 4. 화살표 함수, 람다식
+        const div = (num0, num1) => (num0/num1);
+
+        // 5. 객체 방식
+        const remainder = new Function('num0', 'num1', 'return num0%num1;');
+
+        console.log(add(100, 200));
+        console.log(sub(100, 200));
+        console.log(mul(100, 200));
+        console.log(div(7, 3));
+        console.log(remainder(9, 2));
+
+        // 6. 익명함수 즉시 호출
+        (function(num0, num1){
+            console.log(num0*num1);
+        })(1000, 20);
+
+        console.log(((num0, num1)=>(num0*num1))(1000, 20));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
