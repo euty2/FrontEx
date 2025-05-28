@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        const willExcept = null;
+
+        willExcept.happy();
+
+        console.log('반드시 해야 하는 종료 과정----');
+        */
+
+        try{
+            const willExcept = null;
+            willExcept.happy();
+        }catch(exception){
+            console.log('catch에서 예외 얻음 : ' + exception.message)
+        }finally{
+            console.log('반드시 해야 하는 종료 과정----');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
